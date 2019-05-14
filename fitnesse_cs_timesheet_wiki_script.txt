@@ -1,0 +1,23 @@
+!contents -R2 -g -p -f -h
+
+!define TEST_SYSTEM {slim}
+
+!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner,C:\java\fitnesse4\dotnet4\fitsharp.dll %p}
+!define TEST_RUNNER {C:\java\fitnesse4\dotnet4\Runner.exe}
+!path C:\work\software\c_sharp\FitNesse_tests\exercises\TimeSheet\TimeSheet\bin\Debug\TimeSheet.exe
+
+!|import           |
+|TimeSheetFramework|
+
+!|TimeSheet                                                                                                       |
+|Check In Time|Check Out Time|Hourly Rate|Check In Time Normalized?|Check Out Time Normalized?|Hours Worked?|Pay? |
+|9:00 AM      |9:00 PM       |7          |09:00                    |21:00                     |12.00        |84.00|
+|10:30 AM     |12:30PM       |4          |10:30                    |12:30                     |2.00         |8.00 |
+|9:45AM       |12:45 PM      |10         |09:45                    |12:45                     |3.00         |30.00|
+|9:30 AM      |12:15         |10         |09:30                    |12:15                     |2.75         |27.50|
+|09:30        |12:15 PM      |10         |09:30                    |12:15                     |2.75         |27.50|
+|9:00 AM      |15:00         |8          |09:00                    |15:00                     |6.00         |48.00|
+|09:00        |3:00 PM       |8          |09:00                    |15:00                     |6.00         |48.00|
+|9:05 PM      |3:30 PM       |7          |21:05                    |15:30                     |ERR          |NIL  |
+|13:05 AM     |4:30 PM       |7          |ERR                      |16:30                     |0.00         |0.00 |
+|08:59        |09:01         |8          |08:59                    |09:01                     |             |     |
